@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Contact form" parallel="tests" thread-count="10">
+
+    <parameter name="browser" value="Headless"/>
+    
+    <parameter name="subjectHeading" value="Customer service"/>
+    <parameter name="email" value="dsl@fjls.com"/>
+    <parameter name="orderNum" value="123"/>
+<!--    <parameter name="upload" value="Yes"/>-->
+    <parameter name="message" value="Test message"/>
+    <parameter name="expectedMessage" value="Your message has been successfully sent to our team."/>
+    <parameter name="elementSelector" value=".alert.alert-success"/>
+
+
+    <test name="Contact form regular email">
+        <classes>
+            <class name="AutomationTest">
+            <methods>
+                <include name="automationTest"/>
+            </methods>
+        </class>
+        </classes>
+    </test>
+
+<!--    <test name="Contact form regular email - Firefox">-->
+<!--        <parameter name="browser" value="FIREFOX"/>-->
+<!--        <classes>-->
+<!--            <class name="AutomationTest">-->
+<!--                <methods>-->
+<!--                    <exclude name="testMethod"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+    <!--    <test name="Contact form invalid email">-->
+<!--        <parameter name="email" value="dslfjls.com"/>-->
+<!--        <parameter name="elementSelector" value=".alert.alert-danger li"/>-->
+<!--        <parameter name="expectedMessage" value="Invalid email address."/>-->
+<!--        <classes>-->
+<!--            <class name="AutomationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Empty Subject Heading">-->
+<!--        <parameter name="subjectHeading" value="&#45;&#45; Choose &#45;&#45;"/>-->
+<!--        <parameter name="elementSelector" value=".alert.alert-danger li"/>-->
+<!--        <parameter name="expectedMessage" value="Please select a subject from the list provided."/>-->
+<!--        <classes>-->
+<!--            <class name="AutomationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Webmaster Subject Heading">-->
+<!--        <parameter name="subjectHeading" value="Webmaster"/>-->
+<!--        <parameter name="elementHeading" value="#desc_contact1"/>-->
+<!--    <parameter name="subjectHeadingMsg" value="If a technical problem occurs on this website-->
+<!--							"/>-->
+<!--        <classes>-->
+<!--            <class name="AutomationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Test case without uploading a file">-->
+<!--        <classes>-->
+<!--            <parameter name="upload" value="No"/>-->
+<!--            <class name="AutomationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Test case without ordering a reference">-->
+<!--        <classes>-->
+<!--            <parameter name="orderNum" value=""/>-->
+<!--            <class name="AutomationTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+
+
+</suite>
